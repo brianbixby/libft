@@ -6,7 +6,7 @@
 #    By: bbixby <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/11 17:38:54 by bbixby            #+#    #+#              #
-#    Updated: 2018/09/17 00:46:35 by bbixby           ###   ########.fr        #
+#    Updated: 2018/09/18 23:38:59 by bbixby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,10 +76,12 @@ OFILES	= $(CFILES:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(CFLAGS) -I=$(HEADER) $(CFILES)
+$(NAME): $(OFILES)
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
+
+$(OFILES): $(CFILES)
+	gcc $(CFLAGS) -I=$(HEADER) $(CFILES)
 
 clean:
 	/bin/rm -f $(OFILES)
@@ -88,3 +90,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean all re

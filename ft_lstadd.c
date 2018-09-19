@@ -6,7 +6,7 @@
 /*   By: bbixby <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 11:23:25 by bbixby            #+#    #+#             */
-/*   Updated: 2018/09/10 11:23:53 by bbixby           ###   ########.fr       */
+/*   Updated: 2018/09/18 23:07:19 by bbixby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_lstadd(t_list **alst, t_list *new)
 {
-    if (*alst)
-        new->next = *alst;
-    *alst = new;
+	if (*alst)
+		new->next = *alst;
+	*alst = new;
 }
