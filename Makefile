@@ -6,7 +6,7 @@
 #    By: bbixby <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/11 17:38:54 by bbixby            #+#    #+#              #
-#    Updated: 2018/09/20 03:44:48 by bbixby           ###   ########.fr        #
+#    Updated: 2018/09/20 03:48:34 by bbixby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,8 @@ CFILES = ./ft_memset.c \
 ./ft_lstdelone.c \
 ./ft_lstdel.c \
 ./ft_lstadd.c \
-./ft_lstiter.c 
+./ft_lstiter.c \
+./ft_lstmap.c
 
 OFILES	= $(CFILES:%.c=%.o)
 

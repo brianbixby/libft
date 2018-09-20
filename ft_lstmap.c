@@ -6,7 +6,7 @@
 /*   By: bbixby <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 11:24:35 by bbixby            #+#    #+#             */
-/*   Updated: 2018/09/18 23:38:21 by bbixby           ###   ########.fr       */
+/*   Updated: 2018/09/20 03:54:00 by bbixby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	while (lst)
-	{
+	if (lst && (f))
 		(*f)(lst);
-		lst = lst->next;
-	}
 	return (lst);
 }
