@@ -6,7 +6,7 @@
 /*   By: bbixby <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 11:05:17 by bbixby            #+#    #+#             */
-/*   Updated: 2018/09/11 00:23:22 by bbixby           ###   ########.fr       */
+/*   Updated: 2018/09/19 12:03:53 by bbixby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void		*ft_memalloc(size_t size)
 {
-	void	*vptr;
-	char	*chptr;
+	void			*vptr;
+	unsigned char	*chptr;
 
 	if (!(vptr = (void *)malloc(sizeof(*vptr) * size)))
 		return (NULL);
-	chptr = (char *)vptr;
+	chptr = (unsigned char *)vptr;
 	while (size--)
 		*chptr++ = (unsigned char)0;
 	return (vptr);

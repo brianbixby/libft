@@ -14,9 +14,13 @@
 
 void		ft_putendl_fd(char const *s, int fd)
 {
+	int	i;
+
+	i = 0;
 	if (!s)
 		return ;
-	while (*s)
-		write(fd, &*s++, 1);
+	while (s[i])
+		i++;
+	write(fd, s, i);
 	write(fd, "\n", 1);
 }

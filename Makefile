@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -c -Wall -Werror -Wextra -std=c99
+CFLAGS = -c -Wall -Werror -Wextra
 HEADER = libft.h
 CFILES = ./ft_memset.c \
 ./ft_bzero.c \

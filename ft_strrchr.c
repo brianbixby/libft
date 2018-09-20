@@ -18,7 +18,7 @@ char		*ft_strrchr(const char *s, int c)
 	int		i;
 	int		j;
 
-	ch = c;
+	ch = (char)c;
 	i = 0;
 	j = -1;
 	while (s[i])
@@ -28,6 +28,6 @@ char		*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == ch)
-		return (char *)(s + i);
+		return ((char *)(s + i));
 	return (j < 0 ? (NULL) : ((char *)(s + j)));
 }
